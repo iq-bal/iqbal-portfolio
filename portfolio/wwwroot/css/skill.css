@@ -1,0 +1,171 @@
+﻿/*Skills section*/
+.create-container{
+    padding:50px;
+    
+}
+body {
+    background: black;
+    background: #111c27;
+    height: 100vh;
+    margin: auto;
+}
+
+.container-skillbar {
+    width: 60%;
+    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto !important;
+    justify-content: center;
+    padding: 0;
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #efefef;
+    border-radius: 3px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+    margin-bottom: 25px;
+    border-radius: 3px 3px 3px 3px;
+    background: hsl(207deg 50% 5%);
+    height: 32px;
+    max-height: 6%;
+    overflow: hidden;
+    box-shadow: 0 0 1px 0.75px rgb(22 26 38), 0 0 2px 0.75px rgb(67 68 88 / 50%);
+}
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background: #6adcfa;
+    background-color: black !important;
+    background-image: linear-gradient( #272028, #231d1f, #201921, #231e1b, #231c24 ) !important;
+    box-shadow: 0px 0 2.5px 1px #130c09 !important;
+    margin-bottom: 25px;
+    background: #09131b;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .skillbar-title span {
+        background: rgba(0, 0, 0, 0.15);
+        padding: 0 20px;
+        font-family: "Proxima Nova", sans-serif;
+        font-size: 10px !important;
+        letter-spacing: 1.6px !important;
+        text-transform: uppercase !important;
+        color: #a09a9c;
+        text-shadow: 0.5px 0.5px 0.5px #352f31, -0.5px 0.5px 0.5px #161415, 0.5px -0.5px 0.5px #2f292b, -0.5px -0.5px 0.5px #424242, 0 0 1px #302a2c, 0 0 2px #160d10;
+        height: 100%;
+        overflow: hidden;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+
+.skillbar-bar {
+    width: 0px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    height: 32px;
+    width: 50%;
+    display: block;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: white;
+    font-family: Roboto Condensed;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven {
+    background-image: linear-gradient( var(--center-1), var(--center-2), var(--center-3) );
+    box-shadow: 0 0 0.5px var(--center-3), -3px -20px 14px 3px rgba(20, 7, 14, 0.15), 3px 20px 14px -3px rgba(241, 249, 255, 0.025), -3px -17px 14px -3px rgba(241, 249, 255, 0.025), 0 -20px 10px -10px rgba(44, 6, 13, 0.05) inset, 0 -0px 10px -10px rgba(44, 6, 13, 0.05) inset, 0 30px 20px -10px rgba(241, 249, 255, 0.05) inset, 0 -0.25px 0.75px 0.25px var(--center-1), 0 0.5px 0.75px 0.25px var(--center-3), 0 -0.75px 2px -0.75px var(--center-1), 0 0.75px 2px -0.75px var(--center-3), 0 1px 1.75px -0.75px var(--center-4) inset, 0 -3px 4px -3px var(--center-5) inset, 0 3px 3px -3px var(--center-6), 0 -4px 7px -4px var(--center-1), 0 4px 7px -4px var(--center-6);
+}
+
+.skillbar-bar.one {
+    background-image: linear-gradient(#0f1621, #171d33, #222632);
+    box-shadow: 0 0 0.5px #222632, -3px -20px 14px 3px rgb(20 7 14 / 15%), 3px 20px 14px -3px rgb(241 249 255 / 3%), -3px -17px 14px -3px rgb(241 249 255 / 3%), 0 -20px 10px -10px rgb(44 6 13 / 5%) inset, 0 0px 10px -10px rgb(44 6 13 / 5%) inset, 0 30px 20px -10px rgb(241 249 255 / 5%) inset, 0 -0.25px 0.75px 0.25px #0f1622, 0 0.5px 0.75px 0.25px #222632, 0 -0.75px 2px -0.75px #0f1622, 0 0.75px 2px -0.75px #222632, 0 1px 1.75px -0.75px #313842 inset, 0 -3px 4px -3px #1c1f30 inset, 0 3px 3px -3px #3d3a4d, 0 -4px 7px -4px #0f1622, 0 4px 7px -4px #3d3a4d !important;
+}
+
+.skillbar-bar.two {
+    background-image: linear-gradient( rgb(61 48 110), rgb(80 60 121), rgb(106 90 189), rgb(106 90 189) );
+    box-shadow: 0 0 0.25px rgb(106 90 189), -0.5px -0.75px 1px rgb(241 249 255 / 15%) inset, -0.75px -1.5px 1.5px rgb(44 6 13 / 5%) inset, 0 -0.5px 0.75px 0.25px rgb(61 48 110), 0 0.5px 0.75px 0.25px rgb(106 90 189), 0 -0.75px 2px -0.75px rgb(61 48 110), 0 0.75px 2px -0.75px rgb(106 90 189), -0.5px -2px 3px 0.75px rgb(44 6 13 / 90%), -15px -20px 20px 2px rgb(150 90 64 / 35%), -7px -7px 5px -0.5px rgb(150 90 64 / 50%), -7px -3px 7px rgb(201 149 135 / 55%), -10px -10px 15px rgb(201 149 135 / 25%);
+}
+
+.skillbar-bar.three {
+    background-image: linear-gradient(#4058a2, #3c5fb9, #0d7bf4, #2680f8);
+    box-shadow: 0 0 0.25px #0d7bf4, -0.5px -0.75px 1px rgba(241, 249, 255, 0.15) inset, -0.75px -1.5px 1.5px rgba(44, 6, 13, 0.05) inset, 0 -0.5px 0.75px 0.25px #4058a2, 0 0.5px 0.75px 0.25px #2680f8, 0 -0.75px 2px -0.75px #4058a2, 0 0.75px 2px -0.75px #2680f8, -0.5px -2px 3px 0.75px rgba(44, 6, 13, 0.9), -15px -20px 20px 2px rgba(150, 90, 64, 0.35), -7px -7px 5px -0.5px rgba(150, 90, 64, 0.5), -7px -3px 7px rgba(201, 149, 135, 0.55), -10px -10px 15px rgba(201, 149, 135, 0.25);
+}
+
+.four {
+    background-image: linear-gradient( rgb(63 136 181), rgb(52 148 199), rgb(15 206 251), rgb(21 202 247) );
+    box-shadow: 0 0 0.25px rgb(15 206 251), -0.5px -0.75px 1px rgb(241 249 255 / 15%) inset, -0.75px -1.5px 1.5px rgb(44 6 13 / 5%) inset, 0 -0.5px 0.75px 0.25px rgb(63 136 181), 0 0.5px 0.75px 0.25px hsl(192deg 93% 53%), 0 -0.75px 2px -0.75px rgb(63 136 181), 0 0.75px 2px -0.75px rgb(21 202 247), -0.5px -2px 3px 0.75px rgb(44 6 13 / 90%), -15px -20px 20px 2px rgb(150 90 64 / 35%), -7px -7px 5px -0.5px rgb(150 90 64 / 50%), -7px -3px 7px rgb(201 149 135 / 55%), -10px -10px 15px rgb(201 149 135 / 25%);
+}
+
+.six {
+    background-image: linear-gradient( rgb(181 212 150), rgb(161 216 144), rgb(181 244 167), rgb(179 234 164) );
+    box-shadow: 0 0 0.25px rgb(181 244 167), -0.5px -0.75px 1px rgb(241 249 255 / 15%) inset, -0.75px -1.5px 1.5px rgb(44 6 13 / 5%) inset, 0 -0.5px 0.75px 0.25px rgb(181 212 150), 0 0.5px 0.75px 0.25px rgb(179 234 164), 0 -0.75px 2px -0.75px rgb(181 212 150), 0 0.75px 2px -0.75px rgb(179 234 164), -0.5px -2px 3px 0.75px rgb(44 6 13 / 90%), -15px -20px 20px 2px rgb(150 90 64 / 35%), -7px -7px 5px -0.5px rgb(150 90 64 / 50%), -7px -3px 7px rgb(201 149 135 / 55%), -10px -10px 15px rgb(201 149 135 / 25%);
+}
+
+.five {
+    --button-1: hsl(175deg 97% 57%);
+    --button-2: hsl(187deg 93% 58%);
+    --button-3: hsl(196deg 100% 62%);
+    --button-4: hsl(156deg 96% 64%);
+    --center-1: hsl(167deg 100% 60%);
+    --center-2: hsl(160deg 91% 61%);
+    --center-3: hsl(152deg 64% 54%);
+    --center-4: hsl(135deg 100% 72%);
+    --center-5: hsl(166deg 100% 61%);
+    --center-6: hsl(188deg 100% 69%);
+}
+
+.four {
+    --button-1: hsl(175deg 97% 57%);
+    --button-2: hsl(187deg 93% 58%);
+    --button-3: hsl(196deg 100% 62%);
+    --button-4: hsl(199deg 96% 64%);
+    --center-1: hsl(172deg 100% 60%);
+    --center-2: hsl(188deg 91% 61%);
+    --center-3: hsl(181deg 100% 62%);
+    --center-4: hsl(183deg 100% 72%);
+    --center-5: hsl(217deg 100% 61%);
+    --center-6: hsl(198deg 100% 69%);
+}
+
+.seven {
+    --button-1: #fcb829;
+    --button-2: #f7cf31;
+    --button-3: #ffdb3c;
+    --button-4: #fbdb4c;
+    --center-1: #ffd531;
+    --center-2: #f6dc41;
+    --center-3: #ffda3b;
+    --center-4: #ffe470;
+    --center-5: #ffd038;
+    --center-6: #ffe160;
+}

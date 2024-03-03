@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Iqbal Mahamud</title>
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="topBar">
+            <h1>Iqbal Mahamud</h1>
+            <i class="uil uil-bars toggle"></i>
+        </div>
+        <ul class="navMenu">
+            <li class="navList"><a asp-controller="About" asp-action="Index">About</a></li>
+            <li class="navList"><a asp-controller="Skill" asp-action="Index">Skills</a></li>
+            <li class="navList"><a asp-controller="Project" asp-action="Index" >Projects</a></li>
+            <li class="navList"><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+        </ul>
+        <partial name="_LoginPartial"/>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/js/site.js"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<link rel="stylesheet" href="~/css/createskill.css" />
+
+@model Skill
+
+<div id="login-form-wrap">
+    <h2>Create Skill</h2>
+    <form method="post" id="login-form">
+        <p style="padding:20px" >
+            <input asp-for="Name" type="text" id="username" placeholder="Name" required>
+            <i class="validation"><span></span><span></span></i>
+        </p>
+        <p style="padding:20px">
+            <input asp-for="ProficiencyLevel" type="number" id="email" placeholder="Proficiency Level" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p style="padding:20px">
+            <input type="submit" id="login" value="Update Skill">
+        </p>
+    </form>
+
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

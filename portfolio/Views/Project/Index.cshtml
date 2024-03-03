@@ -1,0 +1,49 @@
+﻿@model List<Project>
+
+<link rel="stylesheet" href="~/css/project.css" />
+
+<section class="body-design">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-controller="Project" asp-action="Create" style="display: inline-block; padding: 10px 15px; background-color: #3498db; color: #fff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+            <i class="fa-solid fa-plus"> Create Project</i>
+        </a>
+    }
+
+    
+
+    <div id="app">
+        @foreach (var project in Model)
+        {
+            var title = $"{project.Title}";
+            var imgURL = $"{project.ImageUrl}";
+            <div>
+                <a href="@project.GithubUrl" target="_blank" class="project">
+                    <img src="@imgURL" alt="@title" />
+                    <p>@title</p>
+                </a>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div>
+                        <a asp-route-id="@project.Id" asp-controller="Project" asp-action="Edit" style="text-decoration: none; padding: 5px 10px; margin-right: 10px; background-color: #3498db; color: #fff; border-radius: 5px; transition: background-color 0.3s;">Edit</a>
+                        <a asp-route-id="@project.Id" asp-controller="Project" asp-action="Delete" style="text-decoration: none; padding: 5px 10px; background-color: #e74c3c; color: #fff; border-radius: 5px; transition: background-color 0.3s;">Delete</a>
+                    </div>
+                }
+                
+
+                
+            </div>
+        }
+    </div>
+<div class="floating-text">
+	Part of <a href="https://github.com/iq-bal" target="_blank">#Iqbal Mahamud</a>
+</div>
+</section>
+
+<script src="https://kit.fontawesome.com/74456a4746.js"
+        crossorigin="anonymous"></script>
+
+<!--
+    <script src="~/js/project.js"></script>
+-->
